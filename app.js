@@ -6,8 +6,8 @@ const links = [
 
 Promise.all(links.map((link) => fetch(link).then((res) => res.json()))).then(
   (data) => {
-    console.log(data[0]);
-    console.log(data[1]);
-    console.log(data[2]);
+    console.log("users:", data[0]);
+    console.log("posts:", data[1]);
+    console.log("albums:", data[2]);
   }
 );
